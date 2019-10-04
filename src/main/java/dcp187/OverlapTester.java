@@ -2,7 +2,7 @@ package dcp187;
 
 public class OverlapTester {
 	
-	public static boolean test(Rectangle[] recs) {
+	public static boolean testRectangleArrayOverlap(Rectangle[] recs) {
 		for(int i = 0; i < recs.length ; i++)
 			for(int j = i+1 ; j < recs.length;j++ )
 				if(rectangleOverlap(recs[i],recs[j]))
@@ -24,7 +24,12 @@ public class OverlapTester {
 	public static boolean intervalOverlap(Interval interval1, Interval interval2) {
 		
 		//interval1 -> interval1.p1 < interval2.p1 
-		if(interval1.p2 > interval2.p1 || interval2.p2 > interval1.p1)
+		if(interval1.p1 > interval2.p1) {
+			Interval temp = interval2 ; 
+			interval2 = interval1; 
+			interval1 = temp ; 
+		}
+		if(interval1.p2 > interval2.p1)
 			return true; 
 		else 
 			return false ;
