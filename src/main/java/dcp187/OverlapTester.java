@@ -15,8 +15,11 @@ public class OverlapTester {
 		Interval rec1y = new Interval(rec1.topleft_y, rec1.topleft_y - rec1.dimension_y);
 		Interval rec2x = new Interval(rec2.topleft_x, rec2.topleft_x + rec2.dimension_x);
 		Interval rec2y = new Interval(rec2.topleft_y, rec2.topleft_y - rec2.dimension_y);
-		if(intervalOverlap(rec1x, rec2x) && intervalOverlap(rec1y, rec2y)) 
+		if(intervalOverlap(rec1x, rec2x) && intervalOverlap(rec1y, rec2y))
+		{
+			System.out.println("rec(" + rec1.topleft_x+ "," + rec1.topleft_y + ","+ rec1.dimension_x+"," + rec1.dimension_y + ") overlap with rec(" +  rec2.topleft_x+ "," + rec2.topleft_y + ","+ rec2.dimension_x+"," + rec2.dimension_y + ")") ; 
 			return true;
+		}
 		else 
 			return false ; 
 	}
