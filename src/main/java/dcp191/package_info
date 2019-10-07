@@ -1,0 +1,19 @@
+package info:
+this is my solution to daily coding problem #191. 
+
+Algorithm:
+0. sort the interval according to their p1.
+
+1. for each overlapping piece of interval, count the number of overlapping interval it has. For example: for (0,10), (1,11),(2,12), (1,2) has 1 intervals overlapping to each other, and (2, 10) has 2 intervals overlapping to each other. Normally, intervals only has a count of overlapping of 0. 
+
+2. count the total number of overlapping for each interval. For example, (0,10) will have 2 overlapping because it has (1,2) is a overlapping and (2,10) is a overlapping. 
+
+3. remove the interval with highest number of overlapping first until no interval is overlapped, i.e. all interval has a number of overlapping of 1. 
+
+Idea:
+- greedy algorithm
+
+algorithm 2 : 
+
+idea: 
+basically this is a interval arrangement problem. To solve the minimum number of intervals we have to remove, we can imagine we are arranging the intervals in a line so that the line fits the maximum number of intervals. These two tasks are identical. Then you use greedy algorithm.
