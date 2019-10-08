@@ -1,35 +1,30 @@
 package dcp191;
 
-
-import static org.junit.Assert.*;
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.* ;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-
-@SuppressWarnings("unused")
-public class OverlapMinimizer2Test {
+public class OverlapMinimizerTest {
 
 	@Test
-	public void testOverlapMinimizer2() {
+	public void testCountRemoved1() {
 		System.out.println("test1") ; 
 		List<Interval> intervals = new ArrayList<>() ; 
 		intervals.add(new Interval(7,9)) ;
 		intervals.add(new Interval(2,4));
 		intervals.add(new Interval(5,8)) ;
 		int expected = 1 ; 
-		int actual = OverlapMinimizer2.minimizeOverlap(intervals); 
+		int actual = OverlapMinimizer.countRemoved(intervals); 
 		assertArrayEquals("correct answer should be " + expected + " but actual is " + actual,expected, actual);
 		//assertEquals(expected, actual, "hello world");
 		
 	}
 	
 	@Test
-	public void testOverlapMinimizer2v2() {
-		System.out.println("test2") ; 
+	public void testCountRemoved2() {
+		System.out.println("test2") ;
 		List<Interval> intervals = new ArrayList<>() ; 
 		intervals.add(new Interval(0,5)); 
 		intervals.add(new Interval(1,4));
@@ -40,7 +35,7 @@ public class OverlapMinimizer2Test {
 		intervals.add(new Interval(6,10));
 		intervals.add(new Interval(8,11)); 
 		int expected = 5 ; 
-		int actual = OverlapMinimizer2.minimizeOverlap(intervals); 
+		int actual = OverlapMinimizer.countRemoved(intervals); 
 		assertArrayEquals("correct answer should be " + expected + " but actual is " + actual,expected, actual);
 	}
 

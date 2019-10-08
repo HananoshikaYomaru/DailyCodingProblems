@@ -2,7 +2,10 @@ package dcp185;
 
 public class OverlapRec {
 	public static int overlapRecArea(Rectangle recs[]) {
-		return calcRecArea(overlapRecs(recs)) ;
+		if (overlapRecs(recs) != null)
+			return calcRecArea(overlapRecs(recs)) ;
+		else 
+			return 0 ; 
 	}
 	
 	public static Rectangle overlapRecs(Rectangle recs[]) {

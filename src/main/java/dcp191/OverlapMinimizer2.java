@@ -9,9 +9,9 @@ public class OverlapMinimizer2 {
 			@Override
 			public int compare(Interval interval1, Interval interval2) {
 				// TODO Auto-generated method stub
-				if(interval1.p1 > interval2.p1)
+				if(interval1.p2 > interval2.p2)
 					return 1  ;
-				else if (interval2.p1 > interval1.p1 )
+				else if (interval2.p2 > interval1.p2 )
 					return -1 ; 
 				return 0;
 			}
