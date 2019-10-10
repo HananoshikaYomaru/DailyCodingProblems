@@ -33,6 +33,21 @@ public class IntersectTest {
 		assertEquals(expected, actual, "expected is " + expected + "but actual is " + actual);
 		
 	}
+	
+	@Test
+	public void testCountIntersectFixedX2() {
+		//fail("Not yet implemented");
+		List<Point> pList = new ArrayList<>( )  ;
+		pList.add(new Point(0,0));
+		pList.add(new Point(0,1));
+		List<Point> qList = new ArrayList < > ( ) ; 
+		qList.add(new Point(1,0)) ; 
+		qList.add(new Point(1,2)) ; 
+		int expected = 0 ; 
+		int actual = Intersect.countIntersectFixedX(pList, qList) ; 
+		assertEquals(expected, actual, "expected is " + expected + "but actual is " + actual);
+		
+	}
 
 	@Test
 	public void testIntervalOverlap() {

@@ -37,6 +37,9 @@ public class Intersect {
 			if(intersectX > (double) 0 && intersectX < (double) 1)
 				return true; 
 		}
+		else 
+			if (y1 == y3)
+				return true ; 
 		return false ;
 	}
 	
