@@ -1,7 +1,6 @@
 package dcp194;
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.* ;  
 
@@ -30,7 +29,7 @@ public class IntersectTest {
 		qList.add(new Point(1,5)) ;
 		int expected = 10 ; 
 		int actual = Intersect.countIntersectFixedX(pList, qList) ; 
-		assertEquals(expected, actual, "expected is " + expected + "but actual is " + actual);
+		assertEquals("expected is " + expected + "but actual is " + actual, expected, actual);
 		
 	}
 	
@@ -45,7 +44,7 @@ public class IntersectTest {
 		qList.add(new Point(1,2)) ; 
 		int expected = 0 ; 
 		int actual = Intersect.countIntersectFixedX(pList, qList) ; 
-		assertEquals(expected, actual, "expected is " + expected + "but actual is " + actual);
+		assertEquals("expected is " + expected + "but actual is " + actual, expected, actual);
 		
 	}
 
