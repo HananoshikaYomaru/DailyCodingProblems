@@ -29,7 +29,7 @@ public class Solution {
 			}
 		}while(!intervalList.isEmpty()) ; 
 		
-		return getResult(stabs) ; 
+		return getResult(stabs) ; //
  	}
 	
 	private static int[] getResult(List<Integer> stabs) {
