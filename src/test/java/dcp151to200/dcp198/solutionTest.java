@@ -17,9 +17,11 @@ public class solutionTest {
 	@Test
 	public void testMultiple2() {
 		int[] array = new int[] {1,3,6,24} ; 
-		int []expected = new int [] { 1,3,6,24} ; 
+		int []expected = new int [] { 1,3,6,24} ;
 		int [] actual = solution.multiple(array) ; 
 		assertArrayEquals("expected is " + expected.toString() + "but actual returned is " + actual, expected , actual ) ; 
 	}
 
 }
+
+//add something from windows 10 intellij
